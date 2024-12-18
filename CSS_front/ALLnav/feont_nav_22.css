@@ -1,0 +1,161 @@
+/* .menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    display: none; /* 預設隱藏，響應式才顯示 
+  } */
+
+  @media (max-width: 1795px) {
+
+}
+
+
+
+/* 高的 */
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #add8e6;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #004080;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #87ceeb;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #87ceeb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.submenu li {
+  width: 150px;
+}
+
+.submenu li a {
+  padding: 10px;
+  color: #fff;
+  text-transform: none;
+}
+
+.submenu li a:hover {
+  background-color: #add8e6;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #004080;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 981px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #add8e6;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 200px;
+      border-radius: 5px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .submenu {
+      position: static;
+      box-shadow: none;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #add8e6;    
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 200px;
+      border-radius: 5px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .submenu {
+      position: static;
+      box-shadow: none;
+  }
+  .navbar-items {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #add8e6;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      z-index: 5;
+  }
+
+  .navbar-items.active {
+      display: flex;
+
+  }
+    
+}
